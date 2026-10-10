@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Shop curated independent fashion on ONEMODE." name="description"/>
+<title>Shop - ONEMODE</title>
+<link href="style.css" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet"
+>
+</head>
+<body>
+<header>
+<a class="logo" href="index.html">ONEMODE</a>
+<nav>
+<a href="shop.html?category=new">NEW</a>
+<a href="shop.html?category=women">WOMEN</a>
+<a href="shop.html?category=men">MEN</a>
+<a href="shop.html?category=unisex">UNISEX</a>
+<a href="brands.html">BRANDS</a>
+<a href="collections.html">COLLECTIONS</a>
+</nav>
+<div class="header-actions">
+<button id="search-btn" type="button">
+                SEARCH
+
+            </button>
+<button id="favourites-btn" type="button">FAVOURITES (<span id="favourite-count">0</span>)</button>
+<button id="cart-btn" type="button">
+                CART (<span id="cart-count">0</span>)
+            </button>
+</div>
+</header>
+<main class="shop-page">
+<section class="shop-heading">
+<p id="shop-index">01 / SHOP</p>
+<h1 id="shop-title">
+                    NEW
+                </h1>
+<div class="shop-heading-bottom">
+<p id="shop-count">0 PRODUCTS</p>
+<div class="shop-controls"><select aria-label="Sort products" id="sort-select"><option value="featured">SORT: FEATURED</option><option value="price-asc">PRICE: LOW TO HIGH</option><option value="price-desc">PRICE: HIGH TO LOW</option><option value="name-asc">NAME: A–Z</option></select><button id="filter-btn" type="button">
+                        FILTER +
+                   </button></div></div>
+<div class="filter-panel" id="filter-panel">
+<div class="filter-group"><p>BRAND</p><label><input class="brand-filter" type="checkbox" value="NØRVE"/> NØRVE</label><label><input class="brand-filter" type="checkbox" value="KØRAI"/> KØRAI</label><label><input class="brand-filter" type="checkbox" value="VAREL"/> VAREL</label><label><input class="brand-filter" type="checkbox" value="NOCTRA"/> NOCTRA</label><label><input class="brand-filter" type="checkbox" value="MOTEL 91"/> MOTEL 91</label><label><input class="brand-filter" type="checkbox" value="ORIGIN STANDARD"/> ORIGIN STANDARD</label><label><input class="brand-filter" type="checkbox" value="FORME/01"/> FORME/01</label><label><input class="brand-filter" type="checkbox" value="KINETIQ"/> KINETIQ</label></div>
+<div class="filter-group">
+<p>PRICE</p>
+<button class="price-filter" data-price="150" type="button">
+                UNDER $150
+            </button>
+<button class="price-filter" data-price="300" type="button">
+                UNDER $300
+            </button>
+<button class="price-filter" data-price="500" type="button">
+                UNDER $500
+            </button>
+</div>
+<div class="filter-actions">
+<button id="clear-filters" type="button">
+                CLEAR
+            </button>
+<button id="apply-filters" type="button">
+                APPLY FILTERS
+            </button>
+</div>
+</div>
+</section>
+<section class="shop-products-grid" id="shop-products">
+</section>
+</main>
+<footer>
+<div class="footer-top">
+<div class="footer-brand">
+<h2>ONEMODE</h2>
+<p>FASHION IN MOTION.</p>
+</div>
+<div class="footer-column">
+<p>SHOP</p>
+<a href="shop.html?category=new">New Arrivals</a>
+<a href="shop.html?category=women">Women</a>
+<a href="shop.html?category=men">Men</a>
+<a href="shop.html?category=unisex">Unisex</a>
+</div>
+<div class="footer-column">
+<p>EXPLORE</p>
+<a href="brands.html">Brands</a>
+<a href="collections.html">Collections</a>
+<a href="favourites.html">Favourites</a>
+</div>
+<div class="footer-column">
+<p>ONEMODE</p>
+<a href="index.html">Home</a>
+<a href="shop.html?category=new">Shop</a>
+<a href="checkout.html">Checkout</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 ONEMODE</p>
+<p>FASHION IN MOTION</p>
+</div>
+</footer><div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart-panel" id="cart-panel">
+<div class="cart-header">
+<h2>YOUR CART</h2>
+<button id="cart-close" type="button">CLOSE</button>
+</div>
+<div class="cart-items" id="cart-items"></div>
+<div class="cart-footer">
+<div class="cart-total-row">
+<span>TOTAL</span>
+<span id="cart-total">$0</span>
+</div>
+<button class="checkout-btn" type="button">
+                CHECKOUT →
+            </button>
+</div>
+</aside>
+<script src="cart.js"></script>
+<script src="products.js"></script>
+<script src="script.js"></script>
+<script src="favourites.js"></script>
+<script src="shop.js"></script>
+<script src="product.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Explore product details, sizing and styling on ONEMODE." name="description"/>
+<title>Product - ONEMODE</title>
+<link href="style.css" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet"
+>
+</head>
+<body>
+<header>
+<a class="logo" href="index.html">ONEMODE</a>
+<nav>
+<a href="shop.html?category=new">NEW</a>
+<a href="shop.html?category=women">WOMEN</a>
+<a href="shop.html?category=men">MEN</a>
+<a href="shop.html?category=unisex">UNISEX</a>
+<a href="brands.html">BRANDS</a>
+<a href="collections.html">COLLECTIONS</a>
+</nav>
+<div class="header-actions">
+<button id="search-btn" type="button">
+                SEARCH
+            </button>
+<button id="favourites-btn" type="button">
+                FAVOURITES (<span id="favourite-count">0</span>)
+            </button>
+<button id="cart-btn" type="button">
+                CART (<span id="cart-count">0</span>)
+            </button>
+</div>
+</header>
+<main class="product-page">
+<!-- LEFT SIDE -->
+<section class="product-gallery">
+<a class="back-link" href="index.html">
+                ← BACK TO SHOP
+            </a>
+<div class="product-gallery-view">
+<div class="product-main-image">
+<img alt="" decoding="async" fetchpriority="high" id="product-image" src=""/>
+</div>
+<div class="product-thumbnails" id="product-thumbnails"></div>
+</div>
+<div class="image-counter">
+<span>01</span>
+<span>
+                    ONEMODE / PRODUCT
+                </span>
+</div>
+</section>
+<!-- RIGHT SIDE -->
+<section class="product-page-info">
+<div class="product-info-top">
+<p id="product-brand"></p>
+<h1 id="product-name"></h1>
+<p id="product-price"></p>
+</div>
+<div class="product-info-body">
+<p id="product-description"></p>
+<!-- SIZE -->
+<div class="product-option">
+<div class="option-header">
+<p>
+                            SELECT SIZE
+                        </p>
+<button id="size-guide-btn" type="button">
+                            SIZE GUIDE
+                        </button>
+</div>
+<div class="product-sizes">
+<button data-size="XS" type="button">
+                            XS
+                        </button>
+<button data-size="S" type="button">
+                            S
+                        </button>
+<button data-size="M" type="button">
+                            M
+                        </button>
+<button data-size="L" type="button">
+                            L
+                        </button>
+<button data-size="XL" type="button">
+                            XL
+                        </button>
+</div>
+</div>
+<!-- SIZE GUIDE MODAL -->
+<div class="size-guide-overlay" id="size-guide-overlay"></div>
+<div class="size-guide-modal" id="size-guide-modal">
+<div class="size-guide-header">
+<h2>SIZE GUIDE</h2>
+<button id="size-guide-close" type="button">
+                  CLOSE
+                 </button>
+</div>
+<div class="size-guide-content">
+<div class="size-guide-row size-guide-title">
+<span>SIZE</span>
+<span>CHEST</span>
+<span>WAIST</span>
+<span>HIPS</span>
+</div>
+<div class="size-guide-row">
+<span>XS</span>
+<span>82–86 cm</span>
+<span>66–70 cm</span>
+<span>86–90 cm</span>
+</div>
+<div class="size-guide-row">
+<span>S</span>
+<span>87–91 cm</span>
+<span>71–75 cm</span>
+<span>91–95 cm</span>
+</div>
+<div class="size-guide-row">
+<span>M</span>
+<span>92–97 cm</span>
+<span>76–81 cm</span>
+<span>96–101 cm</span>
+</div>
+<div class="size-guide-row">
+<span>L</span>
+<span>98–103 cm</span>
+<span>82–87 cm</span>
+<span>102–107 cm</span>
+</div>
+<div class="size-guide-row">
+<span>XL</span>
+<span>104–110 cm</span>
+<span>88–94 cm</span>
+<span>108–114 cm</span>
+</div>
+</div>
+</div>
+<!-- ADD TO CART -->
+<button class="add-to-cart" id="add-to-cart" type="button">
+<span>
+                        ADD TO CART
+                    </span>
+<span>
+                        →
+                    </span>
+</button>
+<!-- FAVOURITES -->
+<button class="favourite-btn" id="favourite-btn" type="button">
+                    ♡ ADD TO FAVOURITES
+                </button>
+<!-- PRODUCT DETAILS -->
+<div class="product-details">
+<!-- MATERIAL -->
+<div class="detail-item">
+<button class="detail-row" type="button">
+<span>
+                                MATERIAL &amp; CARE
+                            </span>
+<span class="detail-icon">
+                                +
+                            </span>
+</button>
+<div class="detail-content">
+<p>
+                                Premium materials selected for comfort
+                                and durability. Follow the care label
+                                instructions to preserve the garment.
+                            </p>
+</div>
+</div>
+<!-- SHIPPING -->
+<div class="detail-item">
+<button class="detail-row" type="button">
+<span>
+                                SHIPPING &amp; RETURNS
+                            </span>
+<span class="detail-icon">
+                                +
+                            </span>
+</button>
+<div class="detail-content">
+<p>
+                                Standard shipping is available worldwide.
+                                Returns are accepted within 14 days
+                                of delivery.
+                            </p>
+</div>
+</div>
+<!-- PRODUCT DETAILS -->
+<div class="detail-item">
+<button class="detail-row" type="button">
+<span>
+                                PRODUCT DETAILS
+                            </span>
+<span class="detail-icon">
+                                +
+                            </span>
+</button>
+<div class="detail-content">
+<p>
+                                Designed with a contemporary silhouette
+                                and crafted for everyday movement.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main><section class="related-products" id="related-products-section">
+<div class="related-products-header">
+<p>04 / DISCOVER</p>
+<h2>YOU MAY ALSO LIKE</h2>
+<a href="shop.html?category=new">VIEW ALL →</a>
+</div>
+<div class="related-products-grid" id="related-products-grid"></div>
+</section>
+<!-- CART -->
+<footer>
+<div class="footer-top">
+<div class="footer-brand">
+<h2>ONEMODE</h2>
+<p>FASHION IN MOTION.</p>
+</div>
+<div class="footer-column">
+<p>SHOP</p>
+<a href="shop.html?category=new">New Arrivals</a>
+<a href="shop.html?category=women">Women</a>
+<a href="shop.html?category=men">Men</a>
+<a href="shop.html?category=unisex">Unisex</a>
+</div>
+<div class="footer-column">
+<p>EXPLORE</p>
+<a href="brands.html">Brands</a>
+<a href="collections.html">Collections</a>
+<a href="favourites.html">Favourites</a>
+</div>
+<div class="footer-column">
+<p>ONEMODE</p>
+<a href="index.html">Home</a>
+<a href="shop.html?category=new">Shop</a>
+<a href="checkout.html">Checkout</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 ONEMODE</p>
+<p>FASHION IN MOTION</p>
+</div>
+</footer><div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart-panel" id="cart-panel">
+<div class="cart-header">
+<h2>
+                YOUR CART
+            </h2>
+<button id="cart-close" type="button">
+                CLOSE
+            </button>
+</div>
+<div class="cart-items" id="cart-items"></div>
+<div class="cart-footer">
+<div class="cart-total-row">
+<span>
+                    TOTAL
+                </span>
+<span id="cart-total">
+                    $0
+                </span>
+</div>
+<button class="checkout-btn" type="button">
+                CHECKOUT →
+            </button>
+</div>
+</aside>
+<script src="cart.js"></script>
+<script src="products.js"></script>
+<script src="script.js"></script>
+<script src="favourites.js"></script>
+<script src="product.js"></script>
+<script src="product.js"></script>
+</body>
+</html>
