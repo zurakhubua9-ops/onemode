@@ -168,14 +168,14 @@
 
     const brandRows = [...document.querySelectorAll(".brand-row")];
     const brandPreviewImages = {
-        nrove: "assets/nrove-coat.jpg",
-        korai: "assets/korai-hoodie.jpg",
-        varel: "assets/varel-blazer.jpg",
-        noctra: "assets/noctra-hood-jacket.jpg",
-        motel91: "assets/category-men.jpg",
-        origin: "assets/category-unisex.jpg",
-        forme01: "assets/spotlight-forme.png",
-        kinetiq: "assets/techwear.png"
+        cos: "assets/nrove-coat.jpg",
+        arket: "assets/category-men.jpg",
+        acne: "assets/tailored.png",
+        ami: "assets/varel-blazer.jpg",
+        ganni: "assets/category-women.avif",
+        weekday: "assets/korai-hoodie.jpg",
+        mm6: "assets/avant-garde.png",
+        salomon: "assets/techwear.png"
     };
 
     let preview = null;
