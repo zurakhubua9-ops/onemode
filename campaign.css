@@ -34,6 +34,11 @@
 .shop-product-info h2,.favourite-product-info h2{line-height:1.35}
 button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[role=button]:focus-visible{outline:3px solid var(--rev-blue);outline-offset:4px}
 .product-thumbnails [role=button]:focus-visible{outline-offset:-4px}
+/* Keep the product caption together instead of stacking legacy margins. */
+.new-arrivals .product-card img{display:block;margin-bottom:0!important}
+.new-arrivals .product-card h3{margin:10px 0 4px!important}
+.new-arrivals .product-card p{margin:0 0 6px!important;line-height:1.4}
+.new-arrivals .product-card>span{margin:0!important;padding:6px 0 0!important;line-height:1.4}
 @media(min-width:901px){.all-brand-row h2{font-size:clamp(32px,4vw,65px)}}
 @media(max-width:900px){
  .campaign-hero{padding:20px 14px 28px!important;gap:20px!important}
@@ -70,3 +75,4 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,[r
  .favourite-product-info,.shop-product-info{flex-wrap:wrap}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
