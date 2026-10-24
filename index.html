@@ -1,552 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="ONEMODE &mdash; a curated independent fashion marketplace concept focused on contemporary brands, movement and modern design." name="description">
-  <title>
-   ONEMODE - Fashion In Motion
-  </title>
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ONEMODE — a curated fashion discovery marketplace concept for contemporary global style.">
+  <title>ONEMODE — Fashion Discovery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  
- </head>
- <body>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="revamp.css">
+</head>
+<body>
+  <div class="promo-strip">
+    CURATED GLOBAL FASHION
+    <span>•</span>
+    DISCOVER NEW DROPS
+    <span>•</span>
+    SAVE YOUR FAVOURITES
+  </div>
+
   <header>
-   <a class="logo" href="index.html">
-    ONEMODE
-   </a>
-   <nav>
-    <a href="shop.html?category=new">
-     NEW
-    </a>
-    <a href="shop.html?category=women">
-     WOMEN
-    </a>
-    <a href="shop.html?category=men">
-     MEN
-    </a>
-    <a href="shop.html?category=unisex">
-     UNISEX
-    </a>
-    <a href="brands.html">
-     BRANDS
-    </a>
-    <a href="collections.html">
-     COLLECTIONS
-    </a>
-   </nav>
-   <div class="header-actions">
-    <button id="search-btn" type="button">
-     SEARCH
-    </button>
-    <button id="favourites-btn" type="button">
-     FAVOURITES (
-     <span id="favourite-count">
-      0
-     </span>
-     )
-    </button>
-    <button id="cart-btn" type="button">
-     CART (
-     <span id="cart-count">
-      0
-     </span>
-     )
-    </button>
-   </div>
+    <a class="logo" href="index.html">ONEMODE</a>
+
+    <nav>
+      <a href="shop.html?category=new">NEW</a>
+      <a href="shop.html?category=women">WOMEN</a>
+      <a href="shop.html?category=men">MEN</a>
+      <a href="shop.html?category=unisex">UNISEX</a>
+      <a href="brands.html">BRANDS</a>
+      <a href="collections.html">EDITS</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="search-btn" type="button">SEARCH</button>
+      <button id="favourites-btn" type="button">SAVED (<span id="favourite-count">0</span>)</button>
+      <button id="cart-btn" type="button">BAG (<span id="cart-count">0</span>)</button>
+    </div>
   </header>
-  <!-- SEARCH -->
+
   <div class="search-panel" id="search-panel">
-   <div class="search-panel-inner">
-    <input id="search-input" placeholder="SEARCH, PRODUCTS, BRANDS..." type="text">
-    <button id="search-close" type="button">
-     CLOSE
-    </button>
-   </div>
-   <div class="search-results" id="search-results">
-   </div>
+    <div class="search-panel-inner">
+      <input id="search-input" placeholder="SEARCH PRODUCTS, BRANDS, EDITS..." type="text">
+      <button id="search-close" type="button">CLOSE</button>
+    </div>
+    <div class="search-results" id="search-results"></div>
   </div>
+
   <main>
-   <!-- HERO -->
-   <section class="hero">
-    <div class="hero-top">
-     <p>
-      GLOBAL FASHION PLATFORM
-     </p>
-     <p>
-      EST.2026
-     </p>
-    </div>
-    <div class="hero-title">
-     <h1>
-      FASHION
-      <br>
-      IN MOTION
-     </h1>
-    </div>
-    <div class="hero-visual">
-     <img alt="ONEMODE fashion campaign" decoding="async" fetchpriority="high" src="assets/hero.jpg">
-    </div>
-    <div class="hero-bottom">
-     <p>
-      Independent fashion brands.
-      <br>
-      One global space.
-     </p>
-     <a class="shop-link" href="collections.html">
-      EXPLORE COLLECTIONS
-     </a>
-    </div>
-   </section>
-   <!-- NEW ARRIVALS -->
-   <section class="new-arrivals">
-    <div class="section-header">
-     <p>
-      01
-     </p>
-     <h2>
-      NEW ARRIVALS
-     </h2>
-     <a href="shop.html?category=new">
-      VIEW ALL &rarr;
-     </a>
-    </div>
-    <div class="products-grid" id="home-new-arrivals">
-    </div>
-   </section>
-   <!-- FEATURED BRANDS -->
-   <section class="featured-brands">
-    <div class="section-header">
-     <p>
-      02
-     </p>
-     <h2>
-      FEATURED BRANDS
-     </h2>
-     <a href="brands.html">
-      VIEW ALL &rarr;
-     </a>
-    </div>
-    <div class="brands-list">
-     <a class="brand-row" href="shop.html?brand=nrove">
-      <span>
-       01
-      </span>
-      <h3>
-       N&Oslash;RVE
-      </h3>
-      <p>
-       COPENHAGEN / MINIMAL
-      </p>
-     </a>
-     <a class="brand-row" href="shop.html?brand=korai">
-      <span>
-       02
-      </span>
-      <h3>
-       K&Oslash;RAI
-      </h3>
-      <p>
-       SEOUL / STREETWEAR
-      </p>
-     </a>
-     <a class="brand-row" href="shop.html?brand=varel">
-      <span>
-       03
-      </span>
-      <h3>
-       VAREL
-      </h3>
-      <p>
-       PARIS / CONTEMPORARY
-      </p>
-     </a>
-     <a class="brand-row" href="shop.html?brand=noctra">
-      <span>
-       04
-      </span>
-      <h3>
-       NOCTRA
-      </h3>
-      <p>
-       BERLIN / AVANT-GARDE
-      </p>
-     </a>
-     <a class="brand-row" href="shop.html?brand=motel91">
-      <span>
-       05
-      </span>
-      <h3>
-       MOTEL 91
-      </h3>
-      <p>
-       LONDON / VINTAGE
-      </p>
-     </a>
-     <a class="brand-row" href="shop.html?brand=origin">
-      <span>
-       06
-      </span>
-      <h3>
-       ORIGIN STANDARD
-      </h3>
-      <p>
-       TBILISI / ESSENTIALS
-      </p>
-     </a>
-     <a class="brand-row" href="shop.html?brand=forme01">
-      <span>
-       07
-      </span>
-      <h3>
-       FORME/01
-      </h3>
-      <p>
-       TOKYO / TAILORING
-      </p>
-     </a>
-     <a class="brand-row" href="shop.html?brand=kinetiq">
-      <span>
-       08
-      </span>
-      <h3>
-       KINETIQ
-      </h3>
-      <p>
-       NEW YORK / TECHWEAR
-      </p>
-     </a>
-    </div>
-   </section>
-   <!-- EDITORIAL -->
-   <section class="editorial">
-    <div class="editorial-image">
-     <img alt="ONEMODE editorial campaign" decoding="async" loading="lazy" src="assets/editorial-01.jpg">
-    </div>
-    <div class="editorial-content">
-     <p class="editorial-index">
-      03 / EDITORIAL
-     </p>
-     <h2>
-      STYLE
-      <br>
-      WITHOUT
-      <br>
-      BORDERS
-     </h2>
-     <p class="editorial-text">
-      Independent fashion. Different cities.
-
-                    Different identities. One moving world.
-     </p>
-     <a href="collections.html">
-      DISCOVER THE EDIT &rarr;
-     </a>
-    </div>
-   </section>
-   <!-- SHOP BY CATEGORY -->
-   <section class="category-story">
-    <div class="category-story-sticky">
-     <div class="category-story-copy">
-      <p class="category-story-index">
-       04 / SHOP BY CATEGORY
-      </p>
-      <div class="category-story-heading">
-       <span>
-        EXPLORE
-       </span>
-       <h2>
-        THE EDIT
-       </h2>
+    <section class="hero">
+      <div class="hero-top">
+        <p>FASHION DISCOVERY PLATFORM</p>
+        <p>EST. 2026</p>
       </div>
-      <div class="category-story-list">
-       <a class="category-story-item active" data-category-index="0" href="shop.html?category=men">
-        <span>
-         01
-        </span>
-        <h3>
-         MEN
-        </h3>
-        <p>
-         TAILORED / MODERN
-        </p>
-       </a>
-       <a class="category-story-item" data-category-index="1" href="shop.html?category=women">
-        <span>
-         02
-        </span>
-        <h3>
-         WOMEN
-        </h3>
-        <p>
-         FORM / MOVEMENT
-        </p>
-       </a>
-       <a class="category-story-item" data-category-index="2" href="shop.html?category=unisex">
-        <span>
-         03
-        </span>
-        <h3>
-         UNISEX
-        </h3>
-        <p>
-         SHARED SILHOUETTES
-        </p>
-       </a>
-       <a class="category-story-item" data-category-index="3" href="shop.html?category=accessories">
-        <span>
-         04
-        </span>
-        <h3>
-         ACCESSORIES
-        </h3>
-        <p>
-         DETAIL / OBJECT
-        </p>
-       </a>
+
+      <div class="hero-title">
+        <h1>FASHION<br>IN MOTION</h1>
       </div>
-     </div>
-     <div class="category-story-visual">
-      <a class="category-story-image active" data-category-image="0" href="shop.html?category=men">
-       <img alt="Men fashion" src="assets/category-men.jpg">
-       <span>
-        VIEW MEN &nearrow;
-       </span>
-      </a>
-      <a class="category-story-image" data-category-image="1" href="shop.html?category=women">
-       <img alt="Women fashion" src="assets/category-women.avif">
-       <span>
-        VIEW WOMEN &nearrow;
-       </span>
-      </a>
-      <a class="category-story-image" data-category-image="2" href="shop.html?category=unisex">
-       <img alt="Unisex fashion" src="assets/category-unisex.jpg">
-       <span>
-        VIEW UNISEX &nearrow;
-       </span>
-      </a>
-      <a class="category-story-image" data-category-image="3" href="shop.html?category=accessories">
-       <img alt="Fashion accessories" src="assets/category-accessories.jpg">
-       <span>
-        VIEW ACCESSORIES &nearrow;
-       </span>
-      </a>
-     </div>
-    </div>
-   </section>
-   <!-- TRENDING -->
-   <section class="trending-products">
-    <div class="section-header">
-     <p>
-      05
-     </p>
-     <h2>
-      TRENDING NOW
-     </h2>
-     <a href="shop.html?category=new">
-      VIEW ALL &rarr;
-     </a>
-    </div>
-    <div class="trending-grid" id="home-trending">
-    </div>
-   </section>
-   <!-- BRAND SPOTLIGHT -->
-   <section class="brand-spotlight">
-    <div class="spotlight-media">
-     <img alt="FORME/01 campaign" decoding="async" loading="lazy" src="assets/spotlight-forme.png">
-     
-    </div>
-    <div class="spotlight-content">
-     <p class="spotlight-index">
-      06 / BRAND SPOTLIGHT
-     </p>
-     <h2>
-      FORME/01
-     </h2>
-     <p class="spotlight-location">
-      TOKYO / URBAN TAILORING
-     </p>
-     <p class="spotlight-description">
-      Structured silhouettes, precise lines and modern tailoring
 
-                    shaped for movement through the city.
-     </p>
-     <a href="product.html?id=forme-structured-set">
-      EXPLORE BRAND &rarr;
-     </a>
-    </div>
-   </section>
-   <!-- MOTION -->
-   <section class="motion-section">
-    <div class="motion-track">
-     <div class="motion-text">
-      <span>
-       FASHION IN MOTION
-      </span>
-      <span>
-       ONE WORLD
-      </span>
-      <span>
-       ONE MODE
-      </span>
-      <span>
-       STYLE WITHOUT BORDERS
-      </span>
-      <span>
-       FASHION IN MOTION
-      </span>
-      <span>
-       ONE WORLD
-      </span>
-      <span>
-       ONE MODE
-      </span>
-      <span>
-       STYLE WITHOUT BORDERS
-      </span>
-     </div>
-    </div>
-   </section>
-   <!-- NEWSLETTER -->
-   <section class="newsletter">
-    <div class="newsletter-left">
-     <p>
-      07 / STAY IN MOTION
-     </p>
-     <h2>
-      NEW BRANDS.
-      <br>
-      NEW DROPS.
-      <br>
-      ONE SPACE
-     </h2>
-    </div>
-    <div class="newsletter-right">
-     <p>
-      Join ONEMODE for new collections,
+      <div class="hero-visual">
+        <img alt="ONEMODE fashion campaign" decoding="async" fetchpriority="high" src="assets/hero.jpg">
+      </div>
 
-                    independent brands and editorial releases.
-     </p>
-     <form class="newsletter-form">
-      <input placeholder="EMAIL ADDRESS" required type="email">
-      <button type="submit">
-       JOIN &rarr;
-      </button>
-     </form>
-    </div>
-   </section>
-   <!-- FOOTER -->
-   <footer>
-    <div class="footer-top">
-     <div class="footer-brand">
-      <h2>
-       ONEMODE
-      </h2>
-      <p>
-       FASHION IN MOTION.
-      </p>
-     </div>
-     <div class="footer-column">
-      <p>
-       SHOP
-      </p>
-      <a href="shop.html?category=new">
-       New Arrivals
-      </a>
-      <a href="shop.html?category=women">
-       Women
-      </a>
-      <a href="shop.html?category=men">
-       Men
-      </a>
-      <a href="shop.html?category=unisex">
-       Unisex
-      </a>
-     </div>
-     <div class="footer-column">
-      <p>
-       EXPLORE
-      </p>
-      <a href="brands.html">
-       Brands
-      </a>
-      <a href="collections.html">
-       Collections
-      </a>
-      <a href="favourites.html">
-       Favourites
-      </a>
-     </div>
-     <div class="footer-column">
-      <p>
-       ONEMODE
-      </p>
-      <a href="index.html">
-       Home
-      </a>
-      <a href="shop.html?category=new">
-       Shop
-      </a>
-      <a href="checkout.html">
-       Checkout
-      </a>
-     </div>
-    </div>
-    <div class="footer-bottom">
-     <p>
-      &copy; 2026 ONEMODE
-     </p>
-     <p>
-      FASHION IN MOTION
-     </p>
-    </div>
-   </footer>
+      <div class="hero-bottom">
+        <p>
+          One place to discover modern fashion,<br>
+          new drops, brands and curated edits.
+        </p>
+
+        <a class="shop-link" href="shop.html?category=new">
+          SHOP THE LATEST →
+        </a>
+      </div>
+    </section>
+
+    <section class="value-strip" aria-label="ONEMODE value">
+      <div class="value-card"><span>01 / DISCOVER</span><strong>Fresh fashion without the endless scroll.</strong></div>
+      <div class="value-card"><span>02 / CURATE</span><strong>Save pieces and build your own edit.</strong></div>
+      <div class="value-card"><span>03 / COMPARE</span><strong>Explore brands, categories and price points.</strong></div>
+      <div class="value-card"><span>04 / MOVE</span><strong>Style designed around real life and motion.</strong></div>
+    </section>
+
+    <section class="new-arrivals">
+      <div class="section-header">
+        <p>01</p>
+        <h2>JUST IN</h2>
+        <a href="shop.html?category=new">SHOP ALL →</a>
+      </div>
+      <div class="products-grid" id="home-new-arrivals"></div>
+    </section>
+
+    <section class="featured-brands">
+      <div class="section-header">
+        <p>02</p>
+        <h2>BRANDS TO KNOW</h2>
+        <a href="brands.html">EXPLORE ALL →</a>
+      </div>
+
+      <div class="brands-list">
+        <a class="brand-row" href="shop.html?brand=cos"><span>01</span><h3>COS</h3><p>LONDON / MODERN MINIMAL</p></a>
+        <a class="brand-row" href="shop.html?brand=arket"><span>02</span><h3>ARKET</h3><p>STOCKHOLM / EVERYDAY DESIGN</p></a>
+        <a class="brand-row" href="shop.html?brand=acne"><span>03</span><h3>ACNE STUDIOS</h3><p>STOCKHOLM / CONTEMPORARY</p></a>
+        <a class="brand-row" href="shop.html?brand=ami"><span>04</span><h3>AMI PARIS</h3><p>PARIS / RELAXED TAILORING</p></a>
+        <a class="brand-row" href="shop.html?brand=ganni"><span>05</span><h3>GANNI</h3><p>COPENHAGEN / PLAYFUL MODERN</p></a>
+        <a class="brand-row" href="shop.html?brand=weekday"><span>06</span><h3>WEEKDAY</h3><p>STOCKHOLM / DENIM & STREET</p></a>
+        <a class="brand-row" href="shop.html?brand=mm6"><span>07</span><h3>MM6</h3><p>PARIS / DECONSTRUCTED</p></a>
+        <a class="brand-row" href="shop.html?brand=salomon"><span>08</span><h3>SALOMON</h3><p>ANNECY / PERFORMANCE STYLE</p></a>
+      </div>
+    </section>
+
+    <section class="editorial">
+      <div class="editorial-image">
+        <img alt="ONEMODE editorial campaign" decoding="async" loading="lazy" src="assets/editorial-01.jpg">
+      </div>
+
+      <div class="editorial-content">
+        <p class="editorial-index">03 / THE EDIT</p>
+        <h2>STYLE<br>THAT<br>MOVES</h2>
+        <p class="editorial-text">
+          Less noise. Better pieces. Strong silhouettes, everyday wear
+          and standout details brought into one visual edit.
+        </p>
+        <a href="collections.html">EXPLORE CURATED EDITS →</a>
+      </div>
+    </section>
+
+    <section class="category-story">
+      <div class="category-story-sticky">
+        <div class="category-story-copy">
+          <p class="category-story-index">04 / SHOP BY MOOD</p>
+          <div class="category-story-heading">
+            <span>FIND</span>
+            <h2>YOUR MODE</h2>
+          </div>
+
+          <div class="category-story-list">
+            <a class="category-story-item active" data-category-index="0" href="shop.html?category=men">
+              <span>01</span><h3>MEN</h3><p>TAILORED / UTILITY / STREET</p>
+            </a>
+            <a class="category-story-item" data-category-index="1" href="shop.html?category=women">
+              <span>02</span><h3>WOMEN</h3><p>FORM / COLOR / MOVEMENT</p>
+            </a>
+            <a class="category-story-item" data-category-index="2" href="shop.html?category=unisex">
+              <span>03</span><h3>UNISEX</h3><p>SHARED SILHOUETTES</p>
+            </a>
+            <a class="category-story-item" data-category-index="3" href="shop.html?category=accessories">
+              <span>04</span><h3>ACCESSORIES</h3><p>BAGS / EYEWEAR / OBJECTS</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="category-story-visual">
+          <a class="category-story-image active" data-category-image="0" href="shop.html?category=men"><img alt="Men fashion" src="assets/category-men.jpg"><span>VIEW MEN ↗</span></a>
+          <a class="category-story-image" data-category-image="1" href="shop.html?category=women"><img alt="Women fashion" src="assets/category-women.avif"><span>VIEW WOMEN ↗</span></a>
+          <a class="category-story-image" data-category-image="2" href="shop.html?category=unisex"><img alt="Unisex fashion" src="assets/category-unisex.jpg"><span>VIEW UNISEX ↗</span></a>
+          <a class="category-story-image" data-category-image="3" href="shop.html?category=accessories"><img alt="Fashion accessories" src="assets/category-accessories.jpg"><span>VIEW ACCESSORIES ↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trending-products">
+      <div class="section-header">
+        <p>05</p>
+        <h2>TRENDING NOW</h2>
+        <a href="shop.html?category=new">SEE THE EDIT →</a>
+      </div>
+      <div class="trending-grid" id="home-trending"></div>
+    </section>
+
+    <section class="brand-spotlight">
+      <div class="spotlight-media">
+        <img alt="Modern tailoring campaign" decoding="async" loading="lazy" src="assets/spotlight-forme.png">
+      </div>
+
+      <div class="spotlight-content">
+        <p class="spotlight-index">06 / STYLE SPOTLIGHT</p>
+        <h2>NEW<br>TAILORING</h2>
+        <p class="spotlight-location">CLEAN LINES / SOFT STRUCTURE</p>
+        <p class="spotlight-description">
+          Sharp enough for work, relaxed enough for everyday.
+          Tailoring is becoming easier, lighter and more personal.
+        </p>
+        <a href="shop.html?collection=urban-form">SHOP THE EDIT →</a>
+      </div>
+    </section>
+
+    <section class="motion-section">
+      <div class="motion-track">
+        <div class="motion-text">
+          <span>DISCOVER MORE</span><span>SAVE YOUR EDIT</span><span>STYLE IN MOTION</span><span>ONE PLACE</span>
+          <span>DISCOVER MORE</span><span>SAVE YOUR EDIT</span><span>STYLE IN MOTION</span><span>ONE PLACE</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-left">
+        <p>07 / DROP ALERTS</p>
+        <h2>NEW DROPS.<br>NEW EDITS.<br>NO NOISE.</h2>
+      </div>
+
+      <div class="newsletter-right">
+        <p>
+          Join ONEMODE for curated fashion updates, fresh drops,
+          brand discoveries and weekly edits.
+        </p>
+
+        <form class="newsletter-form">
+          <input placeholder="EMAIL ADDRESS" required type="email">
+          <button type="submit">JOIN →</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>ONEMODE</h2>
+          <p>FASHION IN MOTION.</p>
+          <p class="concept-note">
+            Portfolio concept. Brand names shown for editorial demonstration only.
+            ONEMODE is not affiliated with or endorsed by the featured brands.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <p>SHOP</p>
+          <a href="shop.html?category=new">Just In</a>
+          <a href="shop.html?category=women">Women</a>
+          <a href="shop.html?category=men">Men</a>
+          <a href="shop.html?category=unisex">Unisex</a>
+        </div>
+
+        <div class="footer-column">
+          <p>DISCOVER</p>
+          <a href="brands.html">Brands</a>
+          <a href="collections.html">Curated Edits</a>
+          <a href="favourites.html">Saved</a>
+        </div>
+
+        <div class="footer-column">
+          <p>ONEMODE</p>
+          <a href="index.html">Home</a>
+          <a href="shop.html?category=new">Shop</a>
+          <a href="checkout.html">Checkout</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ONEMODE</p>
+        <p>FASHION DISCOVERY CONCEPT</p>
+      </div>
+    </footer>
   </main>
-  <!-- CART -->
-  <div class="cart-overlay" id="cart-overlay">
-  </div>
-  <aside class="cart-panel" id="cart-panel">
-   <div class="cart-header">
-    <h2>
-     YOUR CART
-    </h2>
-    <button id="cart-close" type="button">
-     CLOSE
-    </button>
-   </div>
-   <div class="cart-items" id="cart-items">
-   </div>
-   <div class="cart-footer">
-    <div class="cart-total-row">
-     <span>
-      TOTAL
-     </span>
-     <span id="cart-total">
-      $0
-     </span>
-    </div>
-    <button class="checkout-btn" type="button">
-     CHECKOUT &rarr;
-    </button>
-   </div>
-  </aside>
-  <script src="cart.js">
-  </script>
-  <script src="products.js">
-  </script>
-  <script src="script.js">
-  </script>
-  <script src="favourites.js">
-  </script>
-  <script src="home.js">
-  </script>
-  <script src="motion.js">
-  </script>
-  <script src="ui-polish.js">
-  </script>
- </body>
-</html>
 
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <aside class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+      <h2>YOUR BAG</h2>
+      <button id="cart-close" type="button">CLOSE</button>
+    </div>
+
+    <div class="cart-items" id="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>TOTAL</span>
+        <span id="cart-total">$0</span>
+      </div>
+      <button class="checkout-btn" type="button">CHECKOUT →</button>
+    </div>
+  </aside>
+
+  <script src="cart.js"></script>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+  <script src="favourites.js"></script>
+  <script src="home.js"></script>
+  <script src="motion.js"></script>
+  <script src="ui-polish.js"></script>
+</body>
+</html>
