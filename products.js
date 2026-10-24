@@ -2,177 +2,145 @@ const PRODUCTS = [
     {
         id: "nrove-coat",
         name: "Structured Wool Coat",
-        brand: "NØRVE",
-        brandKey: "nrove",
+        brand: "COS",
+        brandKey: "cos",
         price: 220,
         image: "assets/nrove-coat.jpg",
-        images: [
-            "assets/nrove-coat.jpg",
-            "assets/nrove-coat-2.png",
-            "assets/nrove-coat-3.png",
-            "assets/nrove-coat-4.png"
-        ],
-        categories: ["new", "women", "unisex", "outerwear"],
-        collections: ["monochrome", "urban-form"],
-        description:
-            "A structured wool coat defined by clean lines, oversized proportions and a restrained Scandinavian silhouette."
+        images: ["assets/nrove-coat.jpg","assets/nrove-coat-2.png","assets/nrove-coat-3.png","assets/nrove-coat-4.png"],
+        categories: ["new","women","unisex","outerwear"],
+        collections: ["monochrome","urban-form"],
+        description: "Editorial concept: a structured wool coat built around clean proportions, soft tailoring and a modern minimal silhouette."
     },
     {
         id: "korai-hoodie",
         name: "Oversized Graphic Hoodie",
-        brand: "KØRAI",
-        brandKey: "korai",
+        brand: "WEEKDAY",
+        brandKey: "weekday",
         price: 120,
         image: "assets/korai-hoodie.jpg",
-        images: [
-            "assets/korai-hoodie.jpg",
-            "assets/korai-hoodie-2.png",
-            "assets/korai-hoodie-3.png",
-            "assets/korai-hoodie-4.png"
-        ],
-        categories: ["new", "men", "women", "unisex", "hoodies", "tops"],
+        images: ["assets/korai-hoodie.jpg","assets/korai-hoodie-2.png","assets/korai-hoodie-3.png","assets/korai-hoodie-4.png"],
+        categories: ["new","men","women","unisex","hoodies","tops"],
         collections: ["urban-form"],
-        description:
-            "An oversized streetwear hoodie balancing relaxed proportions with a graphic contemporary identity."
+        description: "Editorial concept: an oversized everyday hoodie combining relaxed volume, graphic attitude and easy streetwear styling."
     },
     {
         id: "varel-blazer",
         name: "Double-Breasted Blazer",
-        brand: "VAREL",
-        brandKey: "varel",
+        brand: "AMI PARIS",
+        brandKey: "ami",
         price: 320,
         image: "assets/varel-blazer.jpg",
-        images: [
-            "assets/varel-blazer.jpg",
-            "assets/varel-blazer-2.png",
-            "assets/varel-blazer-3.png",
-            "assets/varel-blazer-4.png"
-        ],
-        categories: ["new", "women", "outerwear"],
-        collections: ["monochrome", "urban-form"],
-        description:
-            "A contemporary double-breasted blazer with sharp tailoring, strong shoulders and a refined Parisian silhouette."
+        images: ["assets/varel-blazer.jpg","assets/varel-blazer-2.png","assets/varel-blazer-3.png","assets/varel-blazer-4.png"],
+        categories: ["new","women","outerwear"],
+        collections: ["monochrome","urban-form"],
+        description: "Editorial concept: relaxed Parisian tailoring with a double-breasted shape, confident shoulders and an easy day-to-night proportion."
     },
     {
         id: "noctra-hood-jacket",
         name: "Sculptural Hood Jacket",
-        brand: "NOCTRA",
-        brandKey: "noctra",
+        brand: "MM6 MAISON MARGIELA",
+        brandKey: "mm6",
         price: 280,
         image: "assets/noctra-hood-jacket.jpg",
-        images: [
-            "assets/noctra-hood-jacket.jpg",
-            "assets/noctra-hood-jacket-2.png",
-            "assets/noctra-hood-jacket-3.png",
-            "assets/noctra-hood-jacket-4.png"
-        ],
-        categories: ["new", "men", "unisex", "outerwear"],
-        collections: ["monochrome", "after-dark"],
-        description:
-            "A sculptural hooded jacket inspired by Berlin avant-garde design, combining technical volume with a dark minimalist profile."
+        images: ["assets/noctra-hood-jacket.jpg","assets/noctra-hood-jacket-2.png","assets/noctra-hood-jacket-3.png","assets/noctra-hood-jacket-4.png"],
+        categories: ["new","men","unisex","outerwear"],
+        collections: ["monochrome","after-dark"],
+        description: "Editorial concept: an experimental hooded layer shaped by volume, utility and a deliberately deconstructed profile."
     },
     {
         id: "motel91-archive-jacket",
-        name: "Archive Utility Jacket",
-        brand: "MOTEL 91",
-        brandKey: "motel91",
+        name: "Relaxed Utility Jacket",
+        brand: "ARKET",
+        brandKey: "arket",
         price: 168,
         image: "assets/category-men.jpg",
         images: ["assets/category-men.jpg"],
-        categories: ["men", "unisex", "outerwear"],
+        categories: ["men","unisex","outerwear"],
         collections: ["after-dark"],
-        description:
-            "A relaxed utility jacket with an archive-inspired cut, washed attitude and an easy 1990s London silhouette."
+        description: "Editorial concept: a practical everyday jacket with a relaxed cut, subtle utility details and a clean Scandinavian mood."
     },
     {
         id: "origin-utility-shirt",
-        name: "Organic Utility Shirt",
-        brand: "ORIGIN STANDARD",
-        brandKey: "origin",
+        name: "Everyday Utility Shirt",
+        brand: "COS",
+        brandKey: "cos",
         price: 92,
         image: "assets/category-unisex.jpg",
         images: ["assets/category-unisex.jpg"],
-        categories: ["new", "men", "women", "unisex", "shirts", "tops"],
+        categories: ["new","men","women","unisex","shirts","tops"],
         collections: ["urban-form"],
-        description:
-            "A clean everyday overshirt built around responsible materials, practical proportions and understated utility."
+        description: "Editorial concept: an understated overshirt designed for layering, practical styling and a versatile everyday wardrobe."
     },
     {
         id: "forme-pleated-trouser",
         name: "Pleated Tailored Trouser",
-        brand: "FORME/01",
-        brandKey: "forme01",
+        brand: "ACNE STUDIOS",
+        brandKey: "acne",
         price: 240,
         image: "assets/tailored.png",
         images: ["assets/tailored.png"],
-        categories: ["new", "men", "women", "unisex", "pants"],
-        collections: ["monochrome", "urban-form"],
-        description:
-            "Wide pleated trousers with architectural volume, precise drape and a restrained Tokyo tailoring language."
+        categories: ["new","men","women","unisex","pants"],
+        collections: ["monochrome","urban-form"],
+        description: "Editorial concept: wide pleated trousers with controlled volume, fluid drape and a contemporary Scandinavian attitude."
     },
     {
         id: "kinetiq-tech-shell",
         name: "Motion Tech Shell",
-        brand: "KINETIQ",
-        brandKey: "kinetiq",
+        brand: "SALOMON",
+        brandKey: "salomon",
         price: 230,
         image: "assets/techwear.png",
         images: ["assets/techwear.png"],
-        categories: ["new", "men", "women", "unisex", "outerwear"],
-        collections: ["after-dark", "urban-form"],
-        description:
-            "A lightweight technical shell shaped for movement, layering and fast transitions through the city."
+        categories: ["new","men","women","unisex","outerwear"],
+        collections: ["after-dark","urban-form"],
+        description: "Editorial concept: a lightweight technical shell focused on movement, layering and performance-led city styling."
     },
     {
         id: "motel91-mini-bag",
-        name: "Archive Mini Bag",
-        brand: "MOTEL 91",
-        brandKey: "motel91",
+        name: "Compact Mini Bag",
+        brand: "GANNI",
+        brandKey: "ganni",
         price: 135,
         image: "assets/category-accessories.jpg",
         images: ["assets/category-accessories.jpg"],
-        categories: ["women", "unisex", "accessories", "bags"],
+        categories: ["women","unisex","accessories","bags"],
         collections: ["after-dark"],
-        description:
-            "A compact archive-inspired bag with a nostalgic proportion and a clean finish designed for everyday carry."
+        description: "Editorial concept: a compact statement bag balancing playful proportion with a practical everyday format."
     },
     {
         id: "varel-column-dress",
         name: "Soft Column Dress",
-        brand: "VAREL",
-        brandKey: "varel",
+        brand: "GANNI",
+        brandKey: "ganni",
         price: 340,
         image: "assets/category-women.avif",
         images: ["assets/category-women.avif"],
-        categories: ["new", "women", "dresses"],
+        categories: ["new","women","dresses"],
         collections: ["monochrome"],
-        description:
-            "A fluid column dress balancing softness and structure with a quiet contemporary Parisian mood."
+        description: "Editorial concept: a fluid dress with a soft column silhouette designed around movement, simplicity and visual impact."
     },
     {
         id: "noctra-asymmetric-layer",
         name: "Asymmetric Layer",
-        brand: "NOCTRA",
-        brandKey: "noctra",
+        brand: "MM6 MAISON MARGIELA",
+        brandKey: "mm6",
         price: 310,
         image: "assets/avant-garde.png",
         images: ["assets/avant-garde.png"],
-        categories: ["women", "unisex", "outerwear"],
-        collections: ["after-dark", "monochrome"],
-        description:
-            "An asymmetric outer layer built around shadow, volume and controlled distortion for a distinctly avant-garde profile."
+        categories: ["women","unisex","outerwear"],
+        collections: ["after-dark","monochrome"],
+        description: "Editorial concept: an asymmetric outer layer built around shadow, volume and controlled distortion."
     },
     {
         id: "forme-structured-set",
         name: "Structured City Set",
-        brand: "FORME/01",
-        brandKey: "forme01",
+        brand: "ACNE STUDIOS",
+        brandKey: "acne",
         price: 295,
         image: "assets/spotlight-forme.png",
         images: ["assets/spotlight-forme.png"],
-        categories: ["women", "unisex", "outerwear"],
-        collections: ["monochrome", "urban-form"],
-        description:
-            "A structured city set with clean geometry, deliberate proportions and a polished urban tailoring finish."
+        categories: ["women","unisex","outerwear"],
+        collections: ["monochrome","urban-form"],
+        description: "Editorial concept: a structured city set with clean geometry, deliberate proportions and a polished urban finish."
     }
 ];
