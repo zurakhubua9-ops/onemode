@@ -24,14 +24,14 @@ const categoryTitles = {
 };
 
 const brandNames = {
-    nrove: "NØRVE",
-    korai: "KØRAI",
-    varel: "VAREL",
-    noctra: "NOCTRA",
-    motel91: "MOTEL 91",
-    origin: "ORIGIN STANDARD",
-    forme01: "FORME/01",
-    kinetiq: "KINETIQ"
+    cos: "COS",
+    arket: "ARKET",
+    acne: "ACNE STUDIOS",
+    ami: "AMI PARIS",
+    ganni: "GANNI",
+    weekday: "WEEKDAY",
+    mm6: "MM6 MAISON MARGIELA",
+    salomon: "SALOMON"
 };
 
 const collectionTitles = {
