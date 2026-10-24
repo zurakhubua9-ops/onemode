@@ -403,3 +403,74 @@ footer{background:#111!important}
 @media(max-width:600px){
   .hero-badge{top:10px;right:10px;padding:8px 10px;font-size:7px}
 }
+
+/* =========================================================
+   MOBILE QA FIXES FROM REAL IPHONE RECORDING
+========================================================= */
+@media (max-width:900px){
+  /* Prevent lazy-load polish from leaving blank product tiles on iOS */
+  .ui-image{
+    opacity:1!important;
+    filter:none!important;
+  }
+
+  /* More compact rhythm between commerce sections */
+  .new-arrivals,
+  .featured-brands,
+  .trending-products,
+  .related-products{
+    padding-top:48px!important;
+    padding-bottom:48px!important;
+  }
+
+  .shop-products-grid{
+    padding-top:26px!important;
+    padding-bottom:52px!important;
+  }
+
+  .shop-product-card,
+  .product-card{
+    margin-bottom:0!important;
+  }
+
+  .shop-product-info{
+    padding-top:10px!important;
+  }
+
+  /* Keep product detail readable but reduce dead space */
+  .product-page-info{
+    gap:18px!important;
+  }
+  #product-description{
+    margin-top:10px!important;
+    margin-bottom:20px!important;
+    line-height:1.55!important;
+  }
+  .product-option{
+    margin-top:10px!important;
+  }
+
+  /* Cleaner footer on phone */
+  footer .footer-top{
+    padding-top:38px!important;
+    padding-bottom:34px!important;
+  }
+  .footer-brand h2{
+    font-size:clamp(48px,15vw,72px)!important;
+  }
+
+  /* Mobile bag readability */
+  .cart-panel{
+    padding-left:14px!important;
+    padding-right:14px!important;
+  }
+  .cart-item{
+    grid-template-columns:82px 1fr!important;
+    gap:14px!important;
+  }
+  .cart-item img{
+    width:82px!important;
+    height:104px!important;
+    object-fit:cover!important;
+  }
+}
