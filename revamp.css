@@ -375,3 +375,31 @@ footer{background:#111!important}
   .all-brand-image{display:none!important}
   .promo-strip{padding-left:14px!important}
 }
+
+/* definitive hero badge fix */
+.hero-visual::after{
+  content:none!important;
+  display:none!important;
+  width:0!important;
+  height:0!important;
+  background:none!important;
+}
+.hero-badge{
+  position:absolute;
+  top:18px;
+  right:18px;
+  z-index:6;
+  width:auto!important;
+  height:auto!important;
+  padding:9px 12px;
+  border-radius:999px;
+  background:var(--rev-lime);
+  color:#111;
+  font:600 8px/1 "Manrope",sans-serif;
+  letter-spacing:.09em;
+  white-space:nowrap;
+  pointer-events:none;
+}
+@media(max-width:600px){
+  .hero-badge{top:10px;right:10px;padding:8px 10px;font-size:7px}
+}
