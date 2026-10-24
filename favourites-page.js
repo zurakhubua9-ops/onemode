@@ -23,6 +23,7 @@ function renderFavourites() {
     if (favourites.length === 0) {
         favouritesGrid.innerHTML = `
             <div class="favourites-empty">
+                <img class="empty-editorial" src="assets/campaign/bag-480.webp" alt="Coral mini bag on a sky-blue plinth">
                 <p>NO SAVED ITEMS YET.</p>
 
                 <a href="shop.html?category=new">

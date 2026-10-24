@@ -2,6 +2,7 @@
    ONEMODE — GLOBAL UI POLISH
 ========================================================= */
 
+(() => {
 document.documentElement.classList.add("js-ready");
 
 const reduceMotion =
@@ -1224,3 +1225,5 @@ document
 
         }
     );
+
+})();

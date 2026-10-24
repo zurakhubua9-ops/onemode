@@ -4,7 +4,7 @@
 
 const HOME_NEW_IDS = [
     "nrove-coat",
-    "korai-hoodie",
+    "varel-column-dress",
     "origin-utility-shirt",
     "kinetiq-tech-shell"
 ];

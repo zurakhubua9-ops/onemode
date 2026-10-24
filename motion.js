@@ -31,7 +31,7 @@
        HERO
     -------------------------------- */
 
-    const hero = document.querySelector(".hero");
+    const hero = document.querySelector(".hero:not(.campaign-hero)");
     const heroVisual = document.querySelector(".hero-visual");
     const heroImage = document.querySelector(".hero-visual img");
     const heroTitle = document.querySelector(".hero-title");
@@ -168,14 +168,14 @@
 
     const brandRows = [...document.querySelectorAll(".brand-row")];
     const brandPreviewImages = {
-        cos: "assets/nrove-coat.jpg",
-        arket: "assets/category-men.jpg",
-        acne: "assets/tailored.png",
-        ami: "assets/varel-blazer.jpg",
-        ganni: "assets/category-women.avif",
-        weekday: "assets/korai-hoodie.jpg",
-        mm6: "assets/avant-garde.png",
-        salomon: "assets/techwear.png"
+        cos: "assets/campaign/nrove-coat.webp",
+        arket: "assets/campaign/utility-960.webp",
+        acne: "assets/campaign/trousers-960.webp",
+        ami: "assets/campaign/varel-blazer.webp",
+        ganni: "assets/campaign/dress-960.webp",
+        weekday: "assets/campaign/korai-hoodie.webp",
+        mm6: "assets/campaign/layer-960.webp",
+        salomon: "assets/campaign/shell-960.webp"
     };
 
     let preview = null;

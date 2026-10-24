@@ -66,6 +66,15 @@ if (product) {
 
                 thumbnail.loading = "lazy";
                 thumbnail.decoding = "async";
+                thumbnail.tabIndex = 0;
+                thumbnail.setAttribute("role", "button");
+                thumbnail.setAttribute("aria-label", `Show ${product.name}, view ${index + 1}`);
+                thumbnail.addEventListener("keydown", event => {
+                    if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        thumbnail.click();
+                    }
+                });
 
                 if (index === 0) {
                     thumbnail.classList.add(

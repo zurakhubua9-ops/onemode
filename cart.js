@@ -1,8 +1,8 @@
 function getCart() {
     try {
-        return JSON.parse(
+        return (JSON.parse(
             localStorage.getItem("onemodeCart")
-        ) || [];
+        ) || []).map(currentProductPresentation);
     } catch {
         return [];
     }
@@ -53,6 +53,7 @@ function updateCart() {
 
         cartItems.innerHTML = `
             <p class="empty-cart">
+                <img class="empty-editorial" src="assets/campaign/bag-480.webp" alt="Coral mini bag on a sky-blue plinth">
                 YOUR CART IS EMPTY.
             </p>
         `;

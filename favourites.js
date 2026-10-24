@@ -1,8 +1,8 @@
 function getFavourites() {
     try {
-        return JSON.parse(
+        return (JSON.parse(
             localStorage.getItem("onemodeFavourites")
-        ) || [];
+        ) || []).map(currentProductPresentation);
     } catch {
         return [];
     }

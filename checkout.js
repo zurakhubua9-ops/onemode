@@ -57,21 +57,7 @@ const checkoutVisualName =
 =================================== */
 
 function getCheckoutCart() {
-
-    try {
-
-        return JSON.parse(
-            localStorage.getItem(
-                "onemodeCart"
-            )
-        ) || [];
-
-    } catch {
-
-        return [];
-
-    }
-
+    return getCart();
 }
 
 

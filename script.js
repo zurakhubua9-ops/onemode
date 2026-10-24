@@ -272,14 +272,16 @@ if (
             results.forEach(product => {
 
                 const item =
-                    document.createElement("div");
+                    document.createElement("a");
 
 
                 item.className =
                     "search-result-item";
+                item.href = `product.html?id=${product.id}`;
 
 
                 item.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" width="56" height="72" decoding="async">
                     <strong>
                         ${product.name}
                     </strong>
