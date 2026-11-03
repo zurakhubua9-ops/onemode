@@ -1,19 +1,26 @@
 function getCart() {
     try {
-        return (JSON.parse(
-            localStorage.getItem("onemodeCart")
-        ) || []).map(currentProductPresentation);
-    } catch {
-        return [];
-    }
+        const value = JSON.parse(localStorage.getItem("onemodeCart") || "[]");
+        if (!Array.isArray(value)) return [];
+        return value.flatMap(item => {
+            if (!item || !Number.isInteger(item.quantity) || item.quantity < 1 || item.quantity > 99 ||
+                !["XS", "S", "M", "L", "XL", "ONE SIZE"].includes(item.size)) return [];
+            const product = PRODUCTS.find(product => product.id === item.id);
+            return product ? [{id: product.id, name: product.name, brand: product.brand,
+                price: product.price, image: product.image, size: item.size, quantity: item.quantity}] : [];
+        });
+    } catch { return []; }
 }
 
 
 function saveCart(cart) {
-    localStorage.setItem(
-        "onemodeCart",
-        JSON.stringify(cart)
-    );
+    try {
+        localStorage.setItem("onemodeCart", JSON.stringify(cart));
+        return true;
+    } catch {
+        alert("Your bag could not be saved. Please enable browser storage and try again.");
+        return false;
+    }
 }
 
 
@@ -265,6 +272,7 @@ if (cartItemsContainer) {
 
             const cart =
                 getCart();
+            if (!Number.isInteger(index) || !cart[index]) return;
 
 
             if (
@@ -274,7 +282,7 @@ if (cartItemsContainer) {
             ) {
 
                 cart[index].quantity =
-                    (cart[index].quantity || 1) + 1;
+                    Math.min(99, (cart[index].quantity || 1) + 1);
 
             }
 
@@ -396,3 +404,10 @@ document.addEventListener(
         }
     }
 );
+
+window.addEventListener("storage", event => {
+ if (event.key === "onemodeCart" || event.key === null) {
+  updateCart();
+  if (typeof renderCheckout === "function") renderCheckout();
+ }
+});

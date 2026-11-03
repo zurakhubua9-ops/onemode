@@ -257,6 +257,7 @@ if (addToCartButton && product) {
                 );
 
             if (existingItem) {
+                if (existingItem.quantity >= 99) { alert("Maximum quantity is 99 per item."); return; }
                 existingItem.quantity += 1;
             } else {
                 cart.push({
@@ -270,7 +271,7 @@ if (addToCartButton && product) {
                 });
             }
 
-            saveCart(cart);
+            if (!saveCart(cart)) return;
             updateCart();
 
             const buttonText =

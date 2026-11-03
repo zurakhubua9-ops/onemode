@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Complete your ONEMODE demo checkout." name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Review your ONEMODE bag and save your order summary." name="description"/>
 <title>Checkout - ONEMODE</title>
 <link href="style.css" rel="stylesheet"/>
 <link href="revamp.css" rel="stylesheet"/>
@@ -15,6 +15,7 @@
     rel="stylesheet"
 >
 <link rel="stylesheet" href="campaign.css">
+<link rel="stylesheet" href="checkout-polish.css">
 </head>
 <body>
 <header>
@@ -54,13 +55,13 @@
                 </h1>
 </div>
 <form class="checkout-form" id="checkout-form">
-<p class="image-disclosure">PORTFOLIO DEMO / No payment is taken and no order is sent. Use fictional details to try the experience.</p>
+<p class="image-disclosure">Save a summary on this device. No order is sent and no payment is taken. Contact and address details are not stored; use fictional details.</p>
 <!-- CONTACT -->
 <div class="checkout-block">
 <h2>
                         CONTACT
                     </h2>
-<input placeholder="EMAIL ADDRESS" required="" type="email"/>
+<label>EMAIL ADDRESS<input aria-label="EMAIL ADDRESS" placeholder="EMAIL ADDRESS" required="" type="email"/></label>
 </div>
 <!-- SHIPPING -->
 <div class="checkout-block">
@@ -68,16 +69,16 @@
                         SHIPPING ADDRESS
                     </h2>
 <div class="checkout-fields two-columns">
-<input placeholder="FIRST NAME" required="" type="text"/>
-<input placeholder="LAST NAME" required="" type="text"/>
+<label>FIRST NAME<input aria-label="FIRST NAME" placeholder="FIRST NAME" required="" type="text"/></label>
+<label>LAST NAME<input aria-label="LAST NAME" placeholder="LAST NAME" required="" type="text"/></label>
 </div>
-<input placeholder="COUNTRY / REGION" required="" type="text"/>
-<input placeholder="ADDRESS" required="" type="text"/>
+<label>COUNTRY / REGION<input aria-label="COUNTRY / REGION" placeholder="COUNTRY / REGION" required="" type="text"/></label>
+<label>ADDRESS<input aria-label="ADDRESS" placeholder="ADDRESS" required="" type="text"/></label>
 <div class="checkout-fields two-columns">
-<input placeholder="CITY" required="" type="text"/>
-<input placeholder="POSTAL CODE" required="" type="text"/>
+<label>CITY<input aria-label="CITY" placeholder="CITY" required="" type="text"/></label>
+<label>POSTAL CODE<input aria-label="POSTAL CODE" placeholder="POSTAL CODE" required="" type="text"/></label>
 </div>
-<input placeholder="PHONE" required="" type="tel"/>
+<label>PHONE<input aria-label="PHONE" placeholder="PHONE" required="" type="tel"/></label>
 </div>
 <!-- PAYMENT -->
 <div class="checkout-block">
@@ -89,22 +90,22 @@
                             PAYMENT METHOD
                         </p>
 <span>
-                            DEMO CHECKOUT
+                            NO PAYMENT REQUIRED
                         </span>
 </div>
 <p class="checkout-demo-note">
-                        This portfolio project does not process real payments.
+                        No card details are requested. This summary does not place a store order.
                     </p>
 </div>
 <button class="place-order-btn" type="submit">
 <span>
-                        PLACE ORDER
+                        SAVE ORDER SUMMARY
                     </span>
 <span>
                         →
                     </span>
 </button>
-</form>
+<p id="checkout-status" role="status"></p><button id="view-saved-order" type="button" hidden>View last saved summary</button></form>
 </section>
 <!-- RIGHT / ORDER SUMMARY -->
 <aside class="checkout-summary">
@@ -154,23 +155,22 @@
 </aside>
 </main>
 <!-- ORDER CONFIRMATION -->
-<div class="order-confirmation" id="order-confirmation">
+<div class="order-confirmation" id="order-confirmation" role="dialog" aria-modal="true" aria-label="Saved order summary" tabindex="-1">
 <div class="order-confirmation-box">
 <p class="order-confirmation-index">
-                ORDER CONFIRMED
+                SUMMARY SAVED
             </p>
 <h2>
-                THANK YOU<br/>
-                FOR YOUR ORDER.
+                YOUR SUMMARY<br/>IS READY.
             </h2>
 <p class="order-confirmation-number">
                 ORDER
                 <span id="order-number"></span>
 </p>
 <p class="order-confirmation-text">
-                Your demo order has been successfully placed.
-                No real payment has been processed.
+                Your summary is saved on this device. No order has been sent and no payment has been taken.
             </p>
+<button id="download-order" class="order-home-btn" type="button">DOWNLOAD SUMMARY ↓</button><button id="close-confirmation" class="order-home-btn" type="button">BACK TO YOUR BAG</button>
 <a class="order-home-btn" href="index.html">
                 CONTINUE SHOPPING →
             </a>
