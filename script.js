@@ -625,10 +625,10 @@ if (newsletterForm) {
 
 
             newsletterButton.textContent =
-                "SUBSCRIBED ✓";
+                "EMAIL NOT SENT";
 
 
-            newsletterInput.value = "";
+            document.getElementById("newsletter-status").textContent = "Newsletter signup is not connected. Your email has not been sent or saved.";
 
 
             setTimeout(

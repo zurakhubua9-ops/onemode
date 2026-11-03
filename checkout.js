@@ -72,6 +72,7 @@ function renderCheckout() {
 
 
     checkoutItems.innerHTML = "";
+    checkoutForm.querySelector('[type="submit"]').disabled = cart.length === 0;
 
 
     /* EMPTY CART */
@@ -245,37 +246,28 @@ if (checkoutForm) {
             }
 
 
-            const generatedOrderNumber =
-                "OM-" +
-                Math.floor(
-                    100000 +
-                    Math.random() *
-                    900000
-                );
-
-
-            orderNumber.textContent =
-                generatedOrderNumber;
-
-
-            localStorage.removeItem(
-                "onemodeCart"
-            );
-
-
-            if (
-                typeof updateCart ===
-                "function"
-            ) {
-
-                updateCart();
-
+            if (!checkoutForm.reportValidity()) return;
+            const generatedOrderNumber = "OM-" + crypto.randomUUID();
+            const record = {
+                id: generatedOrderNumber,
+                createdAt: new Date().toISOString(),
+                status: "saved-locally",
+                items: cart,
+                total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
+            };
+            try {
+                // Keep the latest summary without storing contact or address details.
+                localStorage.setItem("onemodeLastOrder", JSON.stringify(record));
+            } catch {
+                document.getElementById("checkout-status").textContent =
+                    "Could not save your summary. Your bag has been kept. Please enable browser storage and retry.";
+                return;
             }
+            orderNumber.textContent = generatedOrderNumber;
+            openSavedSummary();
+            document.getElementById("checkout-status").textContent =
+                "Summary saved on this device. Your bag is kept for further edits.";
 
-
-            orderConfirmation.classList.add(
-                "active"
-            );
 
         }
     );
@@ -284,3 +276,48 @@ if (checkoutForm) {
 
 
 renderCheckout();
+function downloadOrderSummary() {
+  try {
+    const record = JSON.parse(localStorage.getItem("onemodeLastOrder") || "null");
+    if (!record || !Array.isArray(record.items)) return;
+    const lines = ["ONEMODE · ORDER SUMMARY", record.id,
+      ...record.items.map(item => item.quantity + " × " + item.name + " / " + item.size + " — $" + item.price * item.quantity),
+      "Total: $" + record.total, "", "Saved on this device. No order sent, no payment taken."];
+    const url = URL.createObjectURL(new Blob([lines.join("\n")], {type:"text/plain;charset=utf-8"}));
+    const link = document.createElement("a"); link.href = url; link.download = "onemode-order.txt"; link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  } catch { document.getElementById("checkout-status").textContent = "Saved summary is unavailable."; }
+}
+document.getElementById("download-order").addEventListener("click", downloadOrderSummary);
+document.getElementById("close-confirmation").addEventListener("click", () => {
+    orderConfirmation.classList.remove("active");
+    document.querySelectorAll("[data-summary-inert]").forEach(el => { el.inert = false; el.removeAttribute("data-summary-inert"); });
+    checkoutForm.querySelector('[type="submit"]').focus();
+});
+orderConfirmation.addEventListener("keydown", event => {
+    if (event.key === "Escape") document.getElementById("close-confirmation").click();
+    if (event.key !== "Tab") return;
+    const buttons = [...orderConfirmation.querySelectorAll("button, a")];
+    const first = buttons[0], last = buttons.at(-1);
+    if (event.shiftKey && (document.activeElement === first || document.activeElement === orderConfirmation)) {
+        event.preventDefault(); last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault(); first.focus();
+    }
+});
+
+function openSavedSummary() {
+    try {
+        const record = JSON.parse(localStorage.getItem("onemodeLastOrder") || "null");
+        if (!record || typeof record.id !== "string" || !Array.isArray(record.items)) return;
+        orderNumber.textContent = record.id;
+        orderConfirmation.classList.add("active");
+        document.querySelectorAll("body > header, body > main, #cart-panel").forEach(el => {
+            if (!el.inert) { el.inert = true; el.setAttribute("data-summary-inert", ""); }
+        });
+        orderConfirmation.focus();
+        document.getElementById("view-saved-order").hidden = false;
+    } catch { document.getElementById("checkout-status").textContent = "Saved summary is unavailable."; }
+}
+document.getElementById("view-saved-order").addEventListener("click", openSavedSummary);
+try { document.getElementById("view-saved-order").hidden = !localStorage.getItem("onemodeLastOrder"); } catch {}
